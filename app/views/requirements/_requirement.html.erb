@@ -1,0 +1,10 @@
+<p>
+  <b>Requirement:</b>
+  <%= requirement.name %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Requirement', [requirement.noc, requirement],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>

@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Code:</b>
+  <%= @noc.code %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @noc.description %>
+</p>
+
+<h2> Designations </h2>
+<%= render @noc.designations %>
+
+<% if @noc.designations.count < 2 %>
+<h2>Add a designation:</h2>
+<%= render "designations/form" %>
+<br />
+<% end %>
+
+<h2> Titles </h2>
+<%= render @noc.titles %>
+
+<h2>Add a title:</h2>
+<%= render "titles/form" %>
+
+<br />
+
+<h2> Duties </h2>
+<%= render @noc.duties %>
+  
+<h2>Add a duty:</h2>
+<%= render "duties/form" %>
+
+<br />
+
+<% if @noc.designations.count > 1 %>
+  <h2> Duties Right Branch </h2>
+  <%= render @noc.duty_right_branches %>
+  
+  <h2>Add a right branch duty:</h2>
+  <%= render "duty_right_branches/form" %>
+  <br />
+<% end %>
+
+<% if @noc.designations.count > 1 %>
+  <h2> Duties Left Branch </h2>
+  <%= render @noc.duty_left_branches %>
+  
+  <h2>Add a left branch duty:</h2>
+  <%= render "duty_left_branches/form" %>
+  <br />
+<% end %>
+
+<h2> Requirements </h2>
+<%= render @noc.requirements %>
+
+<h2>Add a requirement:</h2>
+<%= render "requirements/form" %>
+
+<br />
+
+<h2> Additional Information </h2>
+<%= render @noc.add_infos %>
+
+<h2>Add additional information:</h2>
+<%= render "add_infos/form" %>
+			
+<%= link_to 'Edit', edit_noc_path(@noc) %> |
+<%= link_to 'Back', nocs_path %>

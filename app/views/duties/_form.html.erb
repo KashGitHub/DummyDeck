@@ -1,0 +1,10 @@
+<%= form_for([@noc, @noc.duties.build]) do |f| %>
+	<div class="field">
+		<%= f.label :'Example Duty' %> <br />
+		<%= f.text_field :name %>
+	</div>
+
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>

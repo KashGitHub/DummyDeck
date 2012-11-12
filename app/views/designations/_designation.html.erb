@@ -1,0 +1,10 @@
+<p>
+  <b>Designation:</b>
+  <%= designation.name %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Designation', [designation.noc, designation],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>

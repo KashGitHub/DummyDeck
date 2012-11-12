@@ -1,0 +1,10 @@
+<%= form_for([@noc, @noc.duty_right_branches.build]) do |f| %>
+	<div class="field">
+		<%= f.label :'Example Duty Right Branch' %> <br />
+		<%= f.text_field :name %>
+	</div>
+
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
